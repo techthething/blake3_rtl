@@ -1,0 +1,770 @@
+
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:      5899/24288    24%
+Info:         logic LUTs:   4417/24288    18%
+Info:         carry LUTs:   1098/24288     4%
+Info:           RAM LUTs:    256/ 3036     8%
+Info:          RAMW LUTs:    128/ 6072     2%
+
+Info:      Total DFFs:      1899/24288     7%
+
+Info: Packing IOs..
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     761 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info: Checksum: 0x1200c4a1
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:       0/    197     0%
+Info: 	                DCCA:       0/     56     0%
+Info: 	              DP16KD:       0/     56     0%
+Info: 	          MULT18X18D:       0/     28     0%
+Info: 	              ALU54B:       0/     14     0%
+Info: 	             EHXPLLL:       0/      2     0%
+Info: 	             EXTREFB:       0/      1     0%
+Info: 	                DCUA:       0/      1     0%
+Info: 	           PCSCLKDIV:       0/      2     0%
+Info: 	             IOLOGIC:       0/    128     0%
+Info: 	            SIOLOGIC:       0/     69     0%
+Info: 	                 GSR:       0/      1     0%
+Info: 	               JTAGG:       0/      1     0%
+Info: 	                OSCG:       0/      1     0%
+Info: 	               SEDGA:       0/      1     0%
+Info: 	                 DTR:       0/      1     0%
+Info: 	             USRMCLK:       0/      1     0%
+Info: 	             CLKDIVF:       0/      4     0%
+Info: 	           ECLKSYNCB:       0/     10     0%
+Info: 	             DLLDELD:       0/      8     0%
+Info: 	              DDRDLL:       0/      4     0%
+Info: 	             DQSBUFM:       0/      8     0%
+Info: 	     TRELLIS_ECLKBUF:       0/      8     0%
+Info: 	        ECLKBRIDGECS:       0/      2     0%
+Info: 	                DCSC:       0/      2     0%
+Info: 	          TRELLIS_FF:    1899/  24288     7%
+Info: 	        TRELLIS_COMB:    6037/  24288    24%
+Info: 	        TRELLIS_RAMW:      64/   3036     2%
+
+Info: Placed 0 cells based on constraints.
+Info: Creating initial analytic placement for 4757 cells, random placement wirelen = 345537.
+Info:     at initial placer iter 0, wirelen = 3211
+Info:     at initial placer iter 1, wirelen = 3194
+Info:     at initial placer iter 2, wirelen = 2878
+Info:     at initial placer iter 3, wirelen = 3254
+Info: Running main analytical placer, max placement attempts per cell = 8000000.
+Info:     at iteration #1, type ALL: wirelen solved = 2917, spread = 149846, legal = 148983; time = 0.18s
+Info:     at iteration #2, type ALL: wirelen solved = 4060, spread = 108497, legal = 109300; time = 0.20s
+Info:     at iteration #3, type ALL: wirelen solved = 5566, spread = 101089, legal = 102620; time = 0.19s
+Info:     at iteration #4, type ALL: wirelen solved = 7048, spread = 98264, legal = 98610; time = 0.19s
+Info:     at iteration #5, type ALL: wirelen solved = 8866, spread = 88871, legal = 90237; time = 0.20s
+Info:     at iteration #6, type ALL: wirelen solved = 11471, spread = 81553, legal = 83109; time = 0.19s
+Info:     at iteration #7, type ALL: wirelen solved = 14594, spread = 77879, legal = 79335; time = 0.19s
+Info:     at iteration #8, type ALL: wirelen solved = 19149, spread = 70536, legal = 71975; time = 0.18s
+Info:     at iteration #9, type ALL: wirelen solved = 21824, spread = 71402, legal = 73322; time = 0.20s
+Info:     at iteration #10, type ALL: wirelen solved = 26014, spread = 70167, legal = 71666; time = 0.19s
+Info:     at iteration #11, type ALL: wirelen solved = 28618, spread = 70167, legal = 71184; time = 0.19s
+Info:     at iteration #12, type ALL: wirelen solved = 30736, spread = 67232, legal = 68792; time = 0.18s
+Info:     at iteration #13, type ALL: wirelen solved = 31573, spread = 69324, legal = 69930; time = 0.19s
+Info:     at iteration #14, type ALL: wirelen solved = 34059, spread = 67142, legal = 68849; time = 0.18s
+Info:     at iteration #15, type ALL: wirelen solved = 34688, spread = 68191, legal = 69108; time = 0.18s
+Info:     at iteration #16, type ALL: wirelen solved = 35379, spread = 66606, legal = 68383; time = 0.18s
+Info:     at iteration #17, type ALL: wirelen solved = 36401, spread = 68512, legal = 70204; time = 0.18s
+Info:     at iteration #18, type ALL: wirelen solved = 38445, spread = 67670, legal = 69019; time = 0.18s
+Info:     at iteration #19, type ALL: wirelen solved = 39172, spread = 66742, legal = 68476; time = 0.18s
+Info:     at iteration #20, type ALL: wirelen solved = 39994, spread = 65834, legal = 67762; time = 0.20s
+Info:     at iteration #21, type ALL: wirelen solved = 40788, spread = 66771, legal = 67510; time = 0.19s
+Info:     at iteration #22, type ALL: wirelen solved = 41998, spread = 67705, legal = 68683; time = 0.18s
+Info:     at iteration #23, type ALL: wirelen solved = 42692, spread = 65154, legal = 66908; time = 0.18s
+Info:     at iteration #24, type ALL: wirelen solved = 42323, spread = 65621, legal = 66887; time = 0.17s
+Info:     at iteration #25, type ALL: wirelen solved = 42482, spread = 65498, legal = 66572; time = 0.18s
+Info:     at iteration #26, type ALL: wirelen solved = 43096, spread = 67762, legal = 68466; time = 0.18s
+Info:     at iteration #27, type ALL: wirelen solved = 45403, spread = 66514, legal = 67071; time = 0.18s
+Info:     at iteration #28, type ALL: wirelen solved = 45760, spread = 65282, legal = 66244; time = 0.18s
+Info:     at iteration #29, type ALL: wirelen solved = 44961, spread = 65708, legal = 66701; time = 0.18s
+Info:     at iteration #30, type ALL: wirelen solved = 45085, spread = 63288, legal = 64848; time = 0.19s
+Info:     at iteration #31, type ALL: wirelen solved = 44158, spread = 63232, legal = 64526; time = 0.17s
+Info:     at iteration #32, type ALL: wirelen solved = 45067, spread = 64455, legal = 66022; time = 0.17s
+Info:     at iteration #33, type ALL: wirelen solved = 46084, spread = 62979, legal = 63925; time = 0.22s
+Info:     at iteration #34, type ALL: wirelen solved = 45458, spread = 61898, legal = 63910; time = 0.22s
+Info:     at iteration #35, type ALL: wirelen solved = 44902, spread = 61873, legal = 63631; time = 0.18s
+Info:     at iteration #36, type ALL: wirelen solved = 45542, spread = 63298, legal = 64367; time = 0.18s
+Info:     at iteration #37, type ALL: wirelen solved = 46607, spread = 60762, legal = 62421; time = 0.18s
+Info:     at iteration #38, type ALL: wirelen solved = 46983, spread = 60307, legal = 61921; time = 0.18s
+Info:     at iteration #39, type ALL: wirelen solved = 46636, spread = 60681, legal = 62918; time = 0.19s
+Info:     at iteration #40, type ALL: wirelen solved = 47013, spread = 60626, legal = 62944; time = 0.18s
+Info:     at iteration #41, type ALL: wirelen solved = 48140, spread = 61430, legal = 63125; time = 0.17s
+Info:     at iteration #42, type ALL: wirelen solved = 48571, spread = 60337, legal = 61951; time = 0.17s
+Info:     at iteration #43, type ALL: wirelen solved = 48052, spread = 61676, legal = 62966; time = 0.18s
+Info: HeAP Placer Time: 9.98s
+Info:   of which solving equations: 7.05s
+Info:   of which spreading cells: 0.76s
+Info:   of which strict legalisation: 0.43s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 3893, wirelen = 61921
+Info:   at iteration #5: temp = 0.000000, timing cost = 3840, wirelen = 54172
+Info:   at iteration #10: temp = 0.000000, timing cost = 3709, wirelen = 52266
+Info:   at iteration #15: temp = 0.000000, timing cost = 3642, wirelen = 51205
+Info:   at iteration #20: temp = 0.000000, timing cost = 3651, wirelen = 50975
+Info:   at iteration #25: temp = 0.000000, timing cost = 3630, wirelen = 50888
+Info:   at iteration #28: temp = 0.000000, timing cost = 3632, wirelen = 50862 
+Info: SA placement time 17.58s
+
+Info: Max frequency for clock 'clk': 27.04 MHz (FAIL at 50.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 21 endpoint(s)
+Info:          + represents [1,21) endpoint(s)
+Info: [-16978, -15167) |***+
+Info: [-15167, -13356) |******+
+Info: [-13356, -11545) |******+
+Info: [-11545,  -9734) |*****+
+Info: [ -9734,  -7923) |+
+Info: [ -7923,  -6112) |+
+Info: [ -6112,  -4301) | 
+Info: [ -4301,  -2490) | 
+Info: [ -2490,   -679) | 
+Info: [  -679,   1132) | 
+Info: [  1132,   2943) | 
+Info: [  2943,   4754) | 
+Info: [  4754,   6565) |+
+Info: [  6565,   8376) |***+
+Info: [  8376,  10187) |**********+
+Info: [ 10187,  11998) |************************+
+Info: [ 11998,  13809) |************************************************************ 
+Info: [ 13809,  15620) |**************************************************+
+Info: [ 15620,  17431) |********************************************+
+Info: [ 17431,  19242) |********** 
+Info: Checksum: 0x9506587e
+Info: Routing globals...
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 21566 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |      393        606 |  393   606 |     21032|       0.55       0.55|
+Info:       2000 |      844       1155 |  451   549 |     20635|       0.30       0.85|
+Info:       3000 |     1361       1638 |  517   483 |     20329|       0.28       1.13|
+Info:       4000 |     1898       2101 |  537   463 |     20036|       0.31       1.44|
+Info:       5000 |     2362       2637 |  464   536 |     19667|       0.28       1.72|
+Info:       6000 |     2839       3160 |  477   523 |     19336|       0.27       1.99|
+Info:       7000 |     3326       3673 |  487   513 |     18982|       0.32       2.31|
+Info:       8000 |     3911       4088 |  585   415 |     18737|       0.37       2.68|
+Info:       9000 |     4445       4554 |  534   466 |     18436|       0.30       2.98|
+Info:      10000 |     4902       5097 |  457   543 |     18044|       0.37       3.35|
+Info:      11000 |     5423       5576 |  521   479 |     17757|       0.31       3.66|
+Info:      12000 |     5934       6065 |  511   489 |     17448|       0.32       3.98|
+Info:      13000 |     6406       6593 |  472   528 |     17108|       0.33       4.31|
+Info:      14000 |     6819       7180 |  413   587 |     16733|       0.34       4.65|
+Info:      15000 |     7207       7792 |  388   612 |     16524|       0.31       4.96|
+Info:      16000 |     7829       8170 |  622   378 |     16327|       0.36       5.32|
+Info:      17000 |     8414       8585 |  585   415 |     16098|       0.39       5.71|
+Info:      18000 |     8966       9033 |  552   448 |     15804|       0.41       6.12|
+Info:      19000 |     9465       9534 |  499   501 |     15434|       0.39       6.51|
+Info:      20000 |     9868      10131 |  403   597 |     14993|       0.31       6.82|
+Info:      21000 |    10465      10534 |  597   403 |     14845|       0.45       7.27|
+Info:      22000 |    11089      10910 |  624   376 |     14687|       0.43       7.70|
+Info:      23000 |    11715      11284 |  626   374 |     14590|       0.42       8.12|
+Info:      24000 |    12347      11652 |  632   368 |     14473|       0.44       8.56|
+Info:      25000 |    13017      11982 |  670   330 |     14342|       0.47       9.03|
+Info:      26000 |    13635      12364 |  618   382 |     14131|       0.45       9.49|
+Info:      27000 |    14257      12742 |  622   378 |     13902|       0.41       9.90|
+Info:      28000 |    14768      13231 |  511   489 |     13562|       0.38      10.28|
+Info:      29000 |    15133      13866 |  365   635 |     13122|       0.32      10.60|
+Info:      30000 |    15660      14339 |  527   473 |     12894|       0.50      11.10|
+Info:      31000 |    16191      14808 |  531   469 |     12702|       0.47      11.58|
+Info:      32000 |    16766      15233 |  575   425 |     12419|       0.37      11.95|
+Info:      33000 |    17384      15615 |  618   382 |     12376|       0.45      12.40|
+Info:      34000 |    18097      15902 |  713   287 |     12264|       0.50      12.90|
+Info:      35000 |    18733      16266 |  636   364 |     12061|       0.45      13.35|
+Info:      36000 |    19384      16615 |  651   349 |     11920|       0.49      13.85|
+Info:      37000 |    20092      16907 |  708   292 |     11787|       0.44      14.29|
+Info:      38000 |    20702      17297 |  610   390 |     11578|       0.44      14.72|
+Info:      39000 |    21212      17787 |  510   490 |     11274|       0.46      15.18|
+Info:      40000 |    21611      18388 |  399   601 |     10864|       0.46      15.64|
+Info:      41000 |    22087      18879 |  476   491 |     10477|       0.49      16.13|
+Info:      42000 |    22386      19148 |  299   269 |      9836|       0.20      16.33|
+Info:      43000 |    22990      19514 |  604   366 |      9664|       0.30      16.63|
+Info:      44000 |    23664      19826 |  674   312 |      9426|       0.30      16.92|
+Info:      45000 |    24324      20163 |  660   337 |      9204|       0.34      17.27|
+Info:      46000 |    24957      20530 |  633   367 |      8942|       0.33      17.59|
+Info:      47000 |    25425      21061 |  468   531 |      8474|       0.30      17.89|
+Info:      48000 |    25820      21611 |  395   550 |      7942|       0.31      18.20|
+Info:      49000 |    26094      22317 |  274   706 |      7411|       0.37      18.57|
+Info:      50000 |    26294      23117 |  200   800 |      6771|       0.44      19.02|
+Info:      51000 |    26488      23907 |  194   790 |      6023|       0.36      19.37|
+Info:      52000 |    26587      24509 |   99   602 |      5181|       0.25      19.62|
+Info:      53000 |    26659      25237 |   72   728 |      4272|       0.22      19.84|
+Info:      54000 |    26724      25901 |   65   664 |      3351|       0.19      20.03|
+Info:      55000 |    26846      26712 |  122   811 |      2527|       0.25      20.27|
+Info:      56000 |    26949      27604 |  103   892 |      1658|       0.19      20.46|
+Info:      57000 |    27059      28477 |  110   873 |       798|       0.20      20.66|
+Info:      57916 |    27154      29247 |   95   770 |         0|       0.24      20.91|
+Info: Routing complete.
+Info: Router1 time 20.91s
+Info: Checksum: 0x2a77feb0
+
+Info: Critical path report for clock 'clk' (posedge -> posedge):
+Info:       type curr  total name
+Info:   clk-to-q  0.52  0.52 Source u_core.state_q_TRELLIS_FF_Q_2.Q
+Info:    routing  1.23  1.75 Net u_core.state_q[34] (9,12) -> (9,18)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_A0_LUT4_Z.D
+Info:                          Defined in:
+Info:                               ../rtl/blake3_compress.sv:22.19-22.26
+Info:      logic  0.24  1.99 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_A0_LUT4_Z.F
+Info:    routing  1.51  3.50 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_A0 (9,18) -> (9,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.A
+Info:      logic  0.45  3.95 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  3.95 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_FCI_INT (9,23) -> (9,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  3.95 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  3.95 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_COUT (9,23) -> (9,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  4.02 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  4.02 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_FCI_INT (9,23) -> (9,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  4.02 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  4.02 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_COUT (9,23) -> (10,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  4.09 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  4.09 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_FCI_INT (10,23) -> (10,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  4.09 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  4.09 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_COUT (10,23) -> (10,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  4.16 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  4.16 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_FCI_INT (10,23) -> (10,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  4.16 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  4.16 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_COUT (10,23) -> (10,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  4.23 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  4.23 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_FCI_INT (10,23) -> (10,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  4.23 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  4.23 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_COUT (10,23) -> (10,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  4.30 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  4.30 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_FCI_INT (10,23) -> (10,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  4.30 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  4.30 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_COUT (10,23) -> (11,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  4.37 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  4.37 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_FCI_INT (11,23) -> (11,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  4.37 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  4.37 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1_COUT (11,23) -> (11,23)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.44  4.82 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1_CCU2C_S1$CCU2_COMB0.F
+Info:    routing  1.06  5.88 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S0[2] (11,23) -> (11,17)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_A0_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  6.11 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_A0_LUT4_Z.F
+Info:    routing  1.45  7.56 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_A0[0] (11,17) -> (9,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1$CCU2_COMB0.A
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.45  8.01 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  8.01 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1$CCU2_FCI_INT (9,20) -> (9,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  8.01 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  8.01 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT (9,20) -> (9,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  8.08 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  8.08 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN$CCU2_FCI_INT (9,20) -> (9,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  8.08 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  8.08 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT (9,20) -> (9,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  8.15 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  8.15 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (9,20) -> (9,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  8.15 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  8.15 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (9,20) -> (10,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  8.22 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  8.22 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (10,20) -> (10,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  8.22 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  8.22 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (10,20) -> (10,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  8.29 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  8.29 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (10,20) -> (10,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  8.29 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  8.29 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (10,20) -> (10,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  8.36 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  8.36 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (10,20) -> (10,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  8.36 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  8.36 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (10,20) -> (10,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  8.43 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  8.43 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (10,20) -> (10,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  8.43 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  8.43 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (10,20) -> (11,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  8.50 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  8.50 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (11,20) -> (11,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.40  8.91 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.F
+Info:    routing  1.16  10.06 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_B1_CCU2C_S1_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1[3] (11,20) -> (9,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_A1_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  10.30 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_A1_LUT4_Z.F
+Info:    routing  1.06  11.36 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_A1 (9,19) -> (10,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.A
+Info:      logic  0.45  11.81 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  11.81 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (10,19) -> (10,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  11.88 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  11.88 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (10,19) -> (10,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  11.88 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  11.88 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (10,19) -> (11,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  11.95 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  11.95 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (11,19) -> (11,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  11.95 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  11.95 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (11,19) -> (11,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.02 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  12.02 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (11,19) -> (11,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  12.02 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  12.02 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (11,19) -> (11,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.10 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  12.10 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (11,19) -> (11,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  12.10 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  12.10 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (11,19) -> (11,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.17 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  12.17 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (11,19) -> (11,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  12.17 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  12.17 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT_CIN (11,19) -> (12,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  12.24 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  12.24 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT$CCU2_FCI_INT (12,19) -> (12,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  12.24 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  12.24 Net u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0_CIN (12,19) -> (12,19)
+Info:                          Sink u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.44  12.68 Source u_core.g_col2.d_TRELLIS_FF_Q_7_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_S1_CCU2C_S0$CCU2_COMB0.F
+Info:    routing  0.93  13.61 Net u_core.g_col1.d_TRELLIS_FF_Q_16_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_LUT4_Z_C[1] (12,19) -> (13,18)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_16_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  13.84 Source u_core.g_col1.d_TRELLIS_FF_Q_16_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_LUT4_Z.F
+Info:    routing  1.35  15.19 Net u_core.g_col1.d_TRELLIS_FF_Q_16_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C[0] (13,18) -> (15,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.A
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.45  15.64 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  15.64 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (15,20) -> (15,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  15.64 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  15.64 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (15,20) -> (15,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:28.20-28.30
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  15.71 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  15.71 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (15,20) -> (15,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.00  15.71 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCO
+Info:    routing  0.00  15.71 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT (15,20) -> (15,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:28.20-28.30
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  15.78 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB0.FCO
+Info:    routing  0.00  15.78 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_FCI_INT (15,20) -> (15,20)
+Info:                          Sink u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.FCI
+Info:      logic  0.40  16.18 Source u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN$CCU2_COMB1.F
+Info:    routing  0.96  17.14 Net u_core.g_col1.d_TRELLIS_FF_Q_8_DI_LUT4_Z_D_LUT4_Z_C_LUT4_Z_C_CCU2C_A0_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_COUT_CCU2C_CIN_S1[3] (15,20) -> (15,23)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_A0_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  17.38 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_A0_LUT4_Z.F
+Info:    routing  1.33  18.71 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_A0 (15,23) -> (17,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.A
+Info:      logic  0.45  19.16 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  19.16 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,22) -> (17,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  19.16 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  19.16 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,22) -> (17,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  19.23 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  19.23 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,22) -> (17,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  19.23 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  19.23 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,22) -> (17,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  19.30 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  19.30 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,22) -> (17,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  19.30 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  19.30 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,22) -> (17,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  19.37 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  19.37 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,22) -> (17,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  19.37 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  19.37 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,22) -> (18,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  19.44 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  19.44 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (18,22) -> (18,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  19.44 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  19.44 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (18,22) -> (18,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  19.51 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  19.51 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (18,22) -> (18,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.40  19.91 Source u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.F
+Info:    routing  0.92  20.83 Net u_core.g_col3.d_TRELLIS_FF_Q_22_DI_LUT4_Z_C_LUT4_Z_C_CCU2C_A1_B1_CCU2C_S1_CIN_CCU2C_COUT_A1_LUT4_C_Z_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1[1] (18,22) -> (21,22)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_14_DI_LUT4_Z_C_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  21.07 Source u_core.g_col3.d_TRELLIS_FF_Q_14_DI_LUT4_Z_C_LUT4_Z.F
+Info:    routing  1.71  22.78 Net u_core.g_col3.d_TRELLIS_FF_Q_14_DI_LUT4_Z_C[0] (21,22) -> (17,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.A
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.45  23.22 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  23.22 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,26) -> (17,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  23.30 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  23.30 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,26) -> (17,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  23.30 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  23.30 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,26) -> (17,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  23.37 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  23.37 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,26) -> (17,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  23.37 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  23.37 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,26) -> (18,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  23.44 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  23.44 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (18,26) -> (18,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  23.44 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  23.44 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (18,26) -> (18,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  23.51 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  23.51 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (18,26) -> (18,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  23.51 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  23.51 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT_CIN (18,26) -> (18,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  23.58 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  23.58 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT$CCU2_FCI_INT (18,26) -> (18,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  23.58 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  23.58 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_CIN (18,26) -> (18,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  23.65 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB0.FCO
+Info:    routing  0.00  23.65 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1$CCU2_FCI_INT (18,26) -> (18,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB1.FCI
+Info:      logic  0.00  23.65 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB1.FCO
+Info:    routing  0.00  23.65 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1_COUT (18,26) -> (19,26)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:24.17-24.23
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.44  24.09 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S1_CCU2C_S1$CCU2_COMB0.F
+Info:    routing  1.28  25.37 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_S0[3] (19,26) -> (16,29)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_B1_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  25.61 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_B1_LUT4_Z.F
+Info:    routing  1.12  26.73 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_B1 (16,29) -> (16,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.B
+Info:      logic  0.45  27.18 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  27.18 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (16,28) -> (16,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  27.25 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  27.25 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (16,28) -> (16,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  27.25 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  27.25 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (16,28) -> (17,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  27.32 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  27.32 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,28) -> (17,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  27.32 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  27.32 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,28) -> (17,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  27.39 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  27.39 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,28) -> (17,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  27.39 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  27.39 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,28) -> (17,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  27.46 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  27.46 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,28) -> (17,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  27.46 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  27.46 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,28) -> (17,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  27.53 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  27.53 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (17,28) -> (17,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  27.53 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  27.53 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (17,28) -> (18,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  27.60 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  27.60 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (18,28) -> (18,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  27.60 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  27.60 Net u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (18,28) -> (18,28)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.44  28.05 Source u_core.g_col1.b_TRELLIS_FF_Q_24_DI_LUT4_Z_C_LUT4_D_Z_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.F
+Info:    routing  1.34  29.39 Net u_core.g_col0.a_TRELLIS_FF_Q_16_DI_LUT4_Z_B[2] (18,28) -> (22,23)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_31_DI_LUT4_Z.D
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.24  29.62 Source u_core.g_col3.d_TRELLIS_FF_Q_31_DI_LUT4_Z.F
+Info:    routing  1.40  31.03 Net u_core.g_col3.d_TRELLIS_FF_Q_31_DI (22,23) -> (18,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.A
+Info:      logic  0.45  31.47 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  31.47 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (18,24) -> (18,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  31.47 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  31.47 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (18,24) -> (18,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:28.20-28.30
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  31.54 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  31.54 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (18,24) -> (18,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  31.54 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  31.54 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (18,24) -> (18,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:28.20-28.30
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  31.61 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  31.61 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (18,24) -> (18,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  31.61 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  31.61 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (18,24) -> (19,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:28.20-28.30
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  31.69 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  31.69 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (19,24) -> (19,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  31.69 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  31.69 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT_CIN (19,24) -> (19,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:28.20-28.30
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  31.76 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  31.76 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_FCI_INT (19,24) -> (19,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.00  31.76 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN_CCU2C_COUT$CCU2_COMB1.FCO
+Info:    routing  0.00  31.76 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_CIN (19,24) -> (19,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT$CCU2_COMB0.FCI
+Info:                          Defined in:
+Info:                               ../rtl/blake3_g.sv:28.20-28.30
+Info:                               /share/lattice/arith_map_ccu2c.v:74.7-80.4
+Info:                               /share/lattice/ccu2c_sim.vh:9.9-9.13
+Info:      logic  0.07  31.83 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT$CCU2_COMB0.FCO
+Info:    routing  0.00  31.83 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT$CCU2_FCI_INT (19,24) -> (19,24)
+Info:                          Sink u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT$CCU2_COMB1.FCI
+Info:      logic  0.40  32.23 Source u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT$CCU2_COMB1.F
+Info:    routing  0.68  32.91 Net u_core.g_col3.d_TRELLIS_FF_Q_18_DI_CCU2C_A1_CIN_CCU2C_COUT_S1[4] (19,24) -> (15,24)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_12_DI_PFUMX_Z_BLUT_LUT4_Z.M
+Info:                          Defined in:
+Info:                               /share/lattice/cells_map_trellis.v:108.23-108.24
+Info:      logic  0.26  33.17 Source u_core.g_col1.b_TRELLIS_FF_Q_12_DI_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:    routing  1.62  34.79 Net u_core.g_col1.b_TRELLIS_FF_Q_12_DI (15,24) -> (10,15)
+Info:                          Sink u_core.g_col1.b_TRELLIS_FF_Q_12.M
+Info:      setup  0.00  34.79 Source u_core.g_col1.b_TRELLIS_FF_Q_12.M
+Info: 12.68 ns logic, 22.11 ns routing
+
+ERROR: Max frequency for clock 'clk': 28.75 MHz (FAIL at 50.00 MHz)
+
+Info: Slack histogram:
+Info:  legend: * represents 22 endpoint(s)
+Info:          + represents [1,22) endpoint(s)
+Info: [-14788, -13095) |****+
+Info: [-13095, -11402) |******+
+Info: [-11402,  -9709) |********+
+Info: [ -9709,  -8016) |****+
+Info: [ -8016,  -6323) |+
+Info: [ -6323,  -4630) |+
+Info: [ -4630,  -2937) | 
+Info: [ -2937,  -1244) | 
+Info: [ -1244,    449) | 
+Info: [   449,   2142) | 
+Info: [  2142,   3835) | 
+Info: [  3835,   5528) | 
+Info: [  5528,   7221) | 
+Info: [  7221,   8914) | 
+Info: [  8914,  10607) |*+
+Info: [ 10607,  12300) |******************+
+Info: [ 12300,  13993) |*****************************************************+
+Info: [ 13993,  15686) |*********************************************+
+Info: [ 15686,  17379) |************************************************************ 
+Info: [ 17379,  19072) |********************+
+0 warnings, 1 error
+
+Info: Program finished normally.

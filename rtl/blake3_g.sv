@@ -14,7 +14,7 @@ module blake3_g (
 );
 
     function automatic logic [31:0] rotr32(input logic [31:0] x, input int n);
-        return (x >> n) | (x << (32 - n));
+        rotr32 = (x >> n) | (x << (32 - n)); // assigning to the function name sets its result (Yosys does not support return)
     endfunction
 
     logic [31:0] a1, b1, c1, d1;

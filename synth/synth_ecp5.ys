@@ -1,0 +1,15 @@
+# Yosys synthesis script: the full accelerator for a Lattice ECP5 FPGA.
+# Run from the synth folder:   yowasp-yosys synth_ecp5.ys
+# Produces blake3_top.json (the netlist, for place and route) and utilization.txt.
+
+# read all the RTL (-sv turns on SystemVerilog)
+read_verilog -sv ../rtl/blake3_g.sv ../rtl/blake3_compress.sv ../rtl/blake3_chunk.sv
+read_verilog -sv ../rtl/blake3_tree.sv ../rtl/blake3_arbiter.sv ../rtl/blake3_top.sv
+
+# turn the RTL into ECP5 building blocks (LUTs, flip-flops, carry chains).
+# -noiopad: no pin buffers, because the design is measured as a block inside a
+# bigger chip (its 1000+ I/O bits are more than any FPGA package has pins)
+synth_ecp5 -top blake3_top -noiopad -json blake3_top.json
+
+# write the resource counts to a file
+tee -o utilization.txt stat

@@ -1,0 +1,21 @@
+
+8. Printing statistics.
+
+=== blake3_top ===
+
+        +----------Local Count, excluding submodules.
+        | 
+     6514 wires
+    15419 wire bits
+     6514 public wires
+    15419 public wire bits
+       11 ports
+     1038 port bits
+     7839 cells
+       12   $scopeinfo
+      549   CCU2C
+     4417   LUT4
+      898   PFUMX
+       64   TRELLIS_DPR16X4
+     1899   TRELLIS_FF
+

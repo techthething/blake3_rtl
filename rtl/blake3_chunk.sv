@@ -12,6 +12,7 @@ module blake3_chunk (
     input   logic [6:0]     blk_len,       // real bytes in this block, 0 to 64
     input   logic           blk_last,      // last block of this chunk
     input   logic           blk_root,      // this chunk is the whole message
+    input   logic           blk_msg_last,  // last block of the whole message
     input   logic [63:0]    chunk_index,
 
     // hash settings (fixed for a whole message)
@@ -33,7 +34,8 @@ module blake3_chunk (
 
     // chunk value output (to the tree controller)
     output  logic           cv_valid,
-    output  logic [255:0]   cv_out
+    output  logic [255:0]   cv_out,
+    output  logic           cv_last        // this chunk is the message's last chunk (valid with cv_valid)
 );
 
     // flag bits
@@ -49,6 +51,7 @@ module blake3_chunk (
     logic state_q;      // WAIT_BLOCK or WAIT_CORE
     logic first_q;      // next block is the chunk's first
     logic last_q;       // current block is the chunk's last one
+    logic msg_last_q;   // current block is the message's last one
     logic [255:0] cv_q; // chaining value
 
     // direct connections to core 
@@ -70,7 +73,7 @@ module blake3_chunk (
 
     assign cv_out = core_out[255:0]; // chaining value half of the core's result 
 
-
+    assign cv_last  = msg_last_q;     // saved from the chunk's last block, so valid when cv_valid is 1
 
     always_ff @(posedge clk) begin
         if (!rst_n) begin
@@ -82,6 +85,7 @@ module blake3_chunk (
                     state_q <= WAIT_CORE;           // block has been sent to core, wait for result
                     first_q <= 0;                   // any block after this is not the first one
                     last_q <= blk_last;             // store whether this block ends the chunk
+                    msg_last_q <= blk_msg_last;     // remember whether this block ends the message
                 end
             end else begin // WAIT_CORE
                 if (core_out_valid) begin

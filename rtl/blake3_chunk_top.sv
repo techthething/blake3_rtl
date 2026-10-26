@@ -12,6 +12,7 @@ module blake3_chunk_top (
     input   logic [6:0]     blk_len,
     input   logic           blk_last,
     input   logic           blk_root,
+    input   logic           blk_msg_last,
     input   logic [63:0]    chunk_index,
 
     // hash settings (fixed for a whole message)
@@ -20,7 +21,8 @@ module blake3_chunk_top (
 
     // chunk value output
     output  logic           cv_valid,
-    output  logic [255:0]   cv_out
+    output  logic [255:0]   cv_out,
+    output  logic           cv_last
 );
 
     // wires between the chunk controller and the core
@@ -44,6 +46,7 @@ module blake3_chunk_top (
         .blk_len        (blk_len),
         .blk_last       (blk_last),
         .blk_root       (blk_root),
+        .blk_msg_last   (blk_msg_last),
         .chunk_index    (chunk_index),
 
         .key            (key),
@@ -61,7 +64,8 @@ module blake3_chunk_top (
         .core_out       (core_out),
 
         .cv_valid       (cv_valid),
-        .cv_out         (cv_out)
+        .cv_out         (cv_out),
+        .cv_last        (cv_last)
     );
 
     blake3_compress u_core (

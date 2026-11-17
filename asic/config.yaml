@@ -1,0 +1,34 @@
+# LibreLane configuration: blake3_top on SkyWater 130 nm (sky130A, sky130_fd_sc_hd cells)
+#
+# Run from inside the LibreLane nix-shell:
+#   librelane ~/blake3/asic/config.yaml
+# Results go to asic/runs/RUN_<date>/; summarize them with:
+#   python3 ~/blake3/asic/summarize.py
+#
+# The design is hardened as a block ("macro") meant to sit inside a larger chip:
+# its 1000+ I/O pins are placed on the block edge, with no pads.
+
+DESIGN_NAME: blake3_top
+
+VERILOG_FILES:
+  - dir::../rtl/blake3_g.sv
+  - dir::../rtl/blake3_compress.sv
+  - dir::../rtl/blake3_chunk.sv
+  - dir::../rtl/blake3_tree.sv
+  - dir::../rtl/blake3_arbiter.sv
+  - dir::../rtl/blake3_top.sv
+
+# blake3_assert.svh lives next to the RTL. Yosys defines SYNTHESIS itself, so
+# the assertions are left out of the hardware, as in the FPGA flow.
+VERILOG_INCLUDE_DIRS:
+  - dir::../rtl
+
+# Clock: the target the tools must meet. 40 ns (25 MHz) is a deliberately easy
+# first target; the real maximum is read from the slack afterwards:
+#   max clock = 1000 / (CLOCK_PERIOD - worst setup slack)   MHz
+CLOCK_PORT: clk
+CLOCK_PERIOD: 40
+
+# Floorplan: size the block so standard cells fill 40% of the core area,
+# leaving room for routing (the design is wide: 512-bit datapaths).
+FP_CORE_UTIL: 40

@@ -156,6 +156,7 @@ async def test_one_message_at_a_time(dut):
 
     dut.in_valid.value = 1 # the next message's first block is already waiting
     dut.in_last.value = 0
+    dut.in_len.value = 64 # a full block: only a message's last block may be partial
 
     cycles = 0
     while int(dut.hash_valid.value) != 1:

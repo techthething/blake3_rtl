@@ -1,0 +1,36 @@
+# SymbiYosys job: formal proof of the arbiter.
+# Run from this folder:   sby -f arbiter.sby
+#
+# Three tasks:
+#   bmc   - bounded model check: searches every input sequence up to 30 cycles
+#           after reset for a broken assertion (finds bugs, with a trace)
+#   prove - k-induction: proves the assertions hold for ALL cycles, forever
+#   cover - shows every cover point can actually happen (the assumptions
+#           do not accidentally rule out the interesting cases)
+# Each task prints PASS or FAIL; on FAIL, the trace is in <task>/engine_0/*.vcd
+
+[tasks]
+bmc
+prove
+cover
+
+[options]
+bmc:   mode bmc
+bmc:   depth 30
+prove: mode prove
+prove: depth 12
+cover: mode cover
+cover: depth 30
+
+[engines]
+smtbmc z3
+
+[script]
+read_verilog -formal -sv blake3_arbiter.sv
+read_verilog -formal -sv arbiter_formal.sv
+prep -top arbiter_formal
+
+[files]
+../rtl/blake3_assert.svh
+../rtl/blake3_arbiter.sv
+arbiter_formal.sv

@@ -1,4 +1,5 @@
 `default_nettype none
+`include "blake3_assert.svh"
 
 module blake3_tree #(
     parameter int STACK_DEPTH = 8 // default depth is 8, but can be adjusted
@@ -120,6 +121,37 @@ module blake3_tree #(
             end
         end
     end 
+
+    // ------------------------------------------------------------------
+    // Assertions (simulation and formal only; see blake3_assert.svh)
+    // ------------------------------------------------------------------
+`ifndef SYNTHESIS
+    always @(posedge clk) begin
+        if (rst_n) begin
+            // the FSM only uses its three states
+            `CHECK(state_q == IDLE || state_q == MERGE || state_q == WAIT_CORE, "state_q holds an unused value")
+
+            // the stack never holds more than STACK_DEPTH entries
+            `CHECK(sp_q <= STACK_DEPTH, "stack pointer above STACK_DEPTH")
+
+            // never pops an empty stack: a merge always has a left child
+            `CHECK(!(core_in_valid || state_q == WAIT_CORE) || sp_q != 0, "merge with an empty stack")
+
+            // never pushes onto a full stack: the message has more chunks than STACK_DEPTH supports
+            `CHECK(!(state_q == MERGE && !need_merge && !final_q) || sp_q < STACK_DEPTH,
+                   "stack overflow: message too long for STACK_DEPTH")
+
+            // the one-entry input buffer never overflows: a new chunk value only
+            // arrives when the buffer is empty or is being emptied this cycle
+            `CHECK(!(chunk_cv_valid && pend_valid_q && state_q != IDLE),
+                   "chunk value arrived while the input buffer was still full")
+
+            // the root comes out only after every stack entry has been merged in
+            `CHECK(!root_valid || sp_q == 0, "root output with entries left on the stack")
+        end
+    end
+`endif
+
 endmodule
 
 `default_nettype wire

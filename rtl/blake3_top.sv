@@ -1,4 +1,5 @@
 `default_nettype none
+`include "blake3_assert.svh"
 
 // BLAKE3 hash accelerator: top level.
 // Takes a message one 64-byte block at a time and outputs its 32-byte hash.
@@ -245,6 +246,32 @@ module blake3_top #(
         .out_valid      (core_out_valid),
         .out            (core_out)
     );
+
+    // ------------------------------------------------------------------
+    // Assertions (simulation and formal only; see blake3_assert.svh)
+    // ------------------------------------------------------------------
+`ifndef SYNTHESIS
+    logic chk_prev_hash_valid_q;    // hash_valid one cycle ago (stands in for $past, which Icarus cannot run)
+
+    always @(posedge clk) begin
+        chk_prev_hash_valid_q <= rst_n && hash_valid;
+    end
+
+    always @(posedge clk) begin
+        if (rst_n) begin
+            // input contract: blocks hold at most 64 bytes, and only the message's
+            // last block may be partial
+            `CHECK(!in_valid || in_len <= 7'd64, "in_len above 64")
+            `CHECK(!in_valid || in_len == 7'd64 || in_last, "partial block that is not the message's last")
+
+            // a hash only comes out for a message whose last block was accepted
+            `CHECK(!hash_valid || wait_hash_q, "hash_valid without a finished message")
+
+            // hash_valid is a one-cycle pulse
+            `CHECK(!(hash_valid && chk_prev_hash_valid_q), "hash_valid high for two cycles in a row")
+        end
+    end
+`endif
 
 endmodule
 

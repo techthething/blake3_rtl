@@ -1,4 +1,5 @@
 `default_nettype none
+`include "blake3_assert.svh"
 
 module blake3_chunk (
     // clock and reset
@@ -99,4 +100,31 @@ module blake3_chunk (
             end
         end
     end
+
+    // ------------------------------------------------------------------
+    // Assertions (simulation and formal only; see blake3_assert.svh)
+    // ------------------------------------------------------------------
+`ifndef SYNTHESIS
+    always @(posedge clk) begin
+        if (rst_n) begin
+            // input contract: a block holds at most 64 bytes, and only a chunk's
+            // last block may be partial
+            `CHECK(!blk_valid || blk_len <= 7'd64, "blk_len above 64")
+            `CHECK(!blk_valid || blk_len == 7'd64 || blk_last, "partial block that is not the chunk's last")
+
+            // a new block is only taken while no block is in the core
+            `CHECK(!blk_ready || state_q == WAIT_BLOCK, "blk_ready high while waiting for the core")
+
+            // a chunk value only comes out when the core returns the chunk's last block
+            `CHECK(!cv_valid || (core_out_valid && state_q == WAIT_CORE), "cv_valid without a core result")
+
+            // chunk compressions never carry the PARENT flag, and ROOT only on a chunk's last block
+            `CHECK(!core_in_valid || !core_flags[2], "PARENT flag on a chunk compression")
+            `CHECK(!core_in_valid || !core_flags[3] || core_flags[1], "ROOT flag without CHUNK_END")
+        end
+    end
+`endif
+
 endmodule
+
+`default_nettype wire

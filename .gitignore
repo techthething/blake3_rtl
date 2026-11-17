@@ -7,3 +7,6 @@ synth/*.json
 synth/*.log
 *.vcd
 *.fst
+formal/*_bmc/
+formal/*_prove/
+formal/*_cover/

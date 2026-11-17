@@ -1,4 +1,5 @@
 `default_nettype none
+`include "blake3_assert.svh"
 
 module blake3_compress (
     // clock and reset
@@ -221,6 +222,24 @@ module blake3_compress (
             end
         end
     end
+
+    // ------------------------------------------------------------------
+    // Assertions (simulation and formal only; see blake3_assert.svh)
+    // ------------------------------------------------------------------
+`ifndef SYNTHESIS
+    always @(posedge clk) begin
+        if (rst_n) begin
+            // input contract: a block holds at most 64 bytes
+            `CHECK(!(in_valid && in_ready) || block_len <= 7'd64, "block_len above 64")
+
+            // the round counter stays within the 7 rounds (0 to 6) while busy
+            `CHECK(!busy_q || round_q <= 3'd6, "round_q went past round 6")
+
+            // when the result appears, the core is already free for the next request
+            `CHECK(!out_valid || in_ready, "out_valid high while still busy")
+        end
+    end
+`endif
 
 endmodule
 

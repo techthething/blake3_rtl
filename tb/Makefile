@@ -23,6 +23,9 @@ TOPLEVEL_LANG = verilog
 # Turn on SystemVerilog support in Icarus
 COMPILE_ARGS += -g2012
 
+# Let the RTL find blake3_assert.svh
+COMPILE_ARGS += -I$(RTL)
+
 ifeq ($(TEST),g)
     VERILOG_SOURCES     = $(RTL)/blake3_g.sv
     COCOTB_TOPLEVEL     = blake3_g

@@ -1,4 +1,5 @@
 `default_nettype none
+`include "blake3_assert.svh"
 
 module blake3_arbiter (
     // clock and reset
@@ -78,6 +79,29 @@ module blake3_arbiter (
             owner_q <= grant_tree;                            // remember whose it is
         end
     end
+
+    // ------------------------------------------------------------------
+    // Assertions (simulation and formal only; see blake3_assert.svh)
+    // ------------------------------------------------------------------
+`ifndef SYNTHESIS
+    always @(posedge clk) begin
+        if (rst_n) begin
+            // priority: the chunk side is never told "ready" while the tree side is asking
+            `CHECK(!(chunk_in_ready && tree_in_valid), "chunk_in_ready high while tree side is asking")
+
+            // at most one side gets the core per cycle
+            `CHECK(!(chunk_in_valid && chunk_in_ready && tree_in_valid && tree_in_ready),
+                   "both sides accepted in the same cycle")
+
+            // the core sees a request exactly when at least one side is asking
+            `CHECK(core_in_valid == (chunk_in_valid || tree_in_valid), "core_in_valid does not match the requests")
+
+            // a result goes to exactly one side
+            `CHECK(!(chunk_out_valid && tree_out_valid), "result sent to both sides")
+            `CHECK(core_out_valid == (chunk_out_valid || tree_out_valid), "result not delivered to either side")
+        end
+    end
+`endif
 
 endmodule
 

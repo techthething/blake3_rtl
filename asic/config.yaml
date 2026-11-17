@@ -23,11 +23,22 @@ VERILOG_FILES:
 VERILOG_INCLUDE_DIRS:
   - dir::../rtl
 
-# Clock: the target the tools must meet. 40 ns (25 MHz) is a deliberately easy
-# first target; the real maximum is read from the slack afterwards:
+# Clock: the target the tools must meet. The real maximum is read from the
+# slack afterwards:
 #   max clock = 1000 / (CLOCK_PERIOD - worst setup slack)   MHz
+#
+# History: the first run used 40 ns with the default area-first synthesis. The
+# compression round (12 chained 32-bit additions, ending at the 512 bits of
+# state_q) came out about 51 ns long, and timing repair could only shave it
+# slowly (WNS -11.9 -> -11.4 ns over 150 iterations), so it was stopped.
 CLOCK_PORT: clk
-CLOCK_PERIOD: 40
+CLOCK_PERIOD: 50
+
+# Synthesis: optimize for speed instead of the default smallest area, and map
+# additions to carry-select adders instead of ripple-carry. The critical path is
+# a chain of 32-bit adders, so adder speed dominates.
+SYNTH_STRATEGY: DELAY 1
+SYNTH_ADDER_TYPE: CSA
 
 # Floorplan: size the block so standard cells fill 40% of the core area,
 # leaving room for routing (the design is wide: 512-bit datapaths).

@@ -1,9 +1,16 @@
+import os
 import random
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import RisingEdge, FallingEdge, ClockCycles
 
 from blake3 import compress
+
+# Which core version is being tested (set by the Makefile's TWO_CYCLE_ROUND)
+TWO_CYCLE_ROUND = os.environ.get("TWO_CYCLE_ROUND", "0") == "1"
+
+# Falling edges from the accept to out_valid: 7 rounds at 1 or 2 cycles each
+EXPECTED_CYCLES = 14 if TWO_CYCLE_ROUND else 7
 
 def pack(words): # list of 32 bit words -> one integer
     value = 0
@@ -47,7 +54,7 @@ async def run_compress(dut, cv, block, counter, block_len, flags):
         await FallingEdge(dut.clk)
         cycles += 1
 
-        assert cycles < 20, "out_valid never went high"
+        assert cycles < 40, "out_valid never went high"
 
     return unpack(int(dut.out.value), 16), cycles
 
@@ -71,7 +78,7 @@ async def test_many_randoms(dut):
         for i in range(16):
             assert got[i] == expected[i], f"{context}, current pos {i}, got {got[i]:#010x}, expected {expected[i]:#010x}"
 
-        assert cycles == 7, f"{context}, actual cycles: {cycles}"
+        assert cycles == EXPECTED_CYCLES, f"{context}, actual cycles: {cycles}"
 
 async def test_directed(dut):
     # Hand-picked edge cases that random inputs are unlikely to hit exactly:
@@ -100,7 +107,7 @@ async def test_directed(dut):
         for i in range(16):
             assert got[i] == expected[i], f"{name}, current pos {i}, got {got[i]:#010x}, expected {expected[i]:#010x}"
  
-        assert cycles == 7, f"{name}, actual cycles: {cycles}"
+        assert cycles == EXPECTED_CYCLES, f"{name}, actual cycles: {cycles}"
  
         dut._log.info(f"passed: {name}")
  
@@ -135,7 +142,7 @@ async def test_inputs_change_after_accept(dut):
     while int(dut.out_valid.value) != 1:
         await FallingEdge(dut.clk)
         cycles += 1
-        assert cycles < 20, "out_valid never went high"
+        assert cycles < 40, "out_valid never went high"
  
     got = unpack(int(dut.out.value), 16)
     expected = compress(cv, block, counter, block_len, flags)
@@ -143,7 +150,7 @@ async def test_inputs_change_after_accept(dut):
     for i in range(16):
         assert got[i] == expected[i], f"current pos {i}, got {got[i]:#010x}, expected {expected[i]:#010x}"
  
-    assert cycles == 7, f"actual cycles: {cycles}"
+    assert cycles == EXPECTED_CYCLES, f"actual cycles: {cycles}"
  
 @cocotb.test()
 async def test_requests_ignored_while_busy(dut):
@@ -175,7 +182,7 @@ async def test_requests_ignored_while_busy(dut):
     while int(dut.out_valid.value) != 1:
         await FallingEdge(dut.clk)
         cycles += 1
-        assert cycles < 20, "out_valid never went high"
+        assert cycles < 40, "out_valid never went high"
  
     dut.in_valid.value = 0
  
@@ -185,7 +192,7 @@ async def test_requests_ignored_while_busy(dut):
     for i in range(16):
         assert got[i] == expected[i], f"current pos {i}, got {got[i]:#010x}, expected {expected[i]:#010x}"
  
-    assert cycles == 7, f"actual cycles: {cycles}"
+    assert cycles == EXPECTED_CYCLES, f"actual cycles: {cycles}"
  
 @cocotb.test()
 async def test_handshake_timing(dut):
@@ -207,17 +214,17 @@ async def test_handshake_timing(dut):
     await FallingEdge(dut.clk)              # accepted at the end of cycle 0
     dut.in_valid.value = 0
  
-    # Cycles 1 to 7 (the seven rounds): busy, nothing ready yet
-    for cycle in range(1, 8):
+    # Cycles 1 to EXPECTED_CYCLES (the seven rounds): busy, nothing ready yet
+    for cycle in range(1, EXPECTED_CYCLES + 1):
         assert int(dut.in_ready.value) == 0, f"in_ready high while busy (cycle {cycle})"
         assert int(dut.out_valid.value) == 0, f"out_valid high too early (cycle {cycle})"
         await FallingEdge(dut.clk)
  
-    # Cycle 8: result ready, and the core is free again
-    assert int(dut.out_valid.value) == 1, "out_valid not high in cycle 8"
+    # Next cycle: result ready, and the core is free again
+    assert int(dut.out_valid.value) == 1, f"out_valid not high in cycle {EXPECTED_CYCLES + 1}"
     assert int(dut.in_ready.value) == 1, "in_ready not high when the result is ready"
  
-    # Cycle 9: out_valid must have dropped (a one-cycle pulse)
+    # The cycle after: out_valid must have dropped (a one-cycle pulse)
     await FallingEdge(dut.clk)
     assert int(dut.out_valid.value) == 0, "out_valid lasted more than one cycle"
     assert int(dut.in_ready.value) == 1, "in_ready should stay high while idle"
@@ -249,7 +256,7 @@ async def test_reset_midway(dut):
     assert int(dut.in_ready.value) == 1, "in_ready not high after reset"
  
     # Watch long enough that the abandoned compression would have finished
-    for _ in range(12):
+    for _ in range(EXPECTED_CYCLES + 5):
         assert int(dut.out_valid.value) == 0, "out_valid went high after reset"
         await FallingEdge(dut.clk)
  
@@ -267,4 +274,4 @@ async def test_reset_midway(dut):
     for i in range(16):
         assert got[i] == expected[i], f"current pos {i}, got {got[i]:#010x}, expected {expected[i]:#010x}"
  
-    assert cycles == 7, f"actual cycles: {cycles}"
+    assert cycles == EXPECTED_CYCLES, f"actual cycles: {cycles}"

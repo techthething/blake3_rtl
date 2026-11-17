@@ -8,7 +8,8 @@
 // so the outside world only has to send blocks in order and mark the last one.
 
 module blake3_top #(
-    parameter int STACK_DEPTH = 8                 // tree stack size: up to 2^STACK_DEPTH chunks per message
+    parameter int STACK_DEPTH     = 8,            // tree stack size: up to 2^STACK_DEPTH chunks per message
+    parameter bit TWO_CYCLE_ROUND = 1'b0          // compression core: 0 = one round per cycle, 1 = one round per two cycles
 ) (
     // clock and reset
     input   logic           clk,
@@ -231,7 +232,9 @@ module blake3_top #(
         .core_out         (core_out)
     );
 
-    blake3_compress u_core (
+    blake3_compress #(
+        .TWO_CYCLE_ROUND (TWO_CYCLE_ROUND)
+    ) u_core (
         .clk            (clk),
         .rst_n          (rst_n),
 

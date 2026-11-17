@@ -10,3 +10,5 @@ synth/*.log
 formal/*_bmc/
 formal/*_prove/
 formal/*_cover/
+synth/pnr_runs/
+synth/utilization_two_cycle.txt
